@@ -1,8 +1,10 @@
 module SomeLib
 
-open Functions
+
+open NUnit.Framework
+open FuncLib
 
 [<Test>]
 let FunctionsTest =
-    let actualResult = factorial 3
-    Assert.Equal 6, actualResult, "Result is wrong"
+    let actualResult = FuncLib.factorial 3
+    Assert.AreEqual 6 actualResult

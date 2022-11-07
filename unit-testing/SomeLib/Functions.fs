@@ -1,5 +1,5 @@
 namespace SomeLib
 
-module Functions =
+module FuncLib =
 
     let factorial (n: int) = n * (n - 1)
