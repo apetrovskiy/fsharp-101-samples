@@ -1,10 +1,22 @@
-module SomeLib
+module SomeLibTests
 
 
+open System.Collections.Generic
 open NUnit.Framework
-open FuncLib
+open SomeLib
+
+
 
 [<Test>]
-let FunctionsTest =
-    let actualResult = FuncLib.factorial 3
-    Assert.AreEqual 6 actualResult
+[<TestCaseSource("factorialTestData")>]
+
+let factorialTest (number: int, expectedResult: int) =
+    let actualResult = FuncLib.factorial number
+    Assert.AreEqual(expectedResult, actualResult, $"Expected = {expectedResult}, actual = {actualResult}")
+
+let factorialTestData () : IEnumerable<TestCaseData> =
+    [ new TestCaseData(0, 1)
+      new TestCaseData(1, 1)
+      new TestCaseData(2, 2)
+      new TestCaseData(3, 6)
+      new TestCaseData(4, 24) ]
