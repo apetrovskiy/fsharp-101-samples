@@ -14,9 +14,6 @@ jobs:
   dotnet:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-#     needs:
-#       - build
-      # - dotnet-format
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/allure-prep
@@ -57,19 +54,13 @@ jobs:
     runs-on: ubuntu-latest
     if: always()
     needs:
-#       - python
-#       - node-mocha
-#       - node-cucumber
-#       - node-nightwatch
-#       - golang
       - dotnet
-#       - jdk
     steps:
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
       - uses: ./.github/actions/allure-prep
-#       - uses: ./.github/actions/switch-network
-#       - uses: ./.github/actions/allure-environment-data
-#         if: always()
+      # - uses: ./.github/actions/switch-network
+      # - uses: ./.github/actions/allure-environment-data
+      #   if: always()
       - uses: ./.github/actions/allure-upload
         if: always()
         with:
@@ -108,7 +99,7 @@ jobs:
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
