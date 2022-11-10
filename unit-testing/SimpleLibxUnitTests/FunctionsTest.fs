@@ -1,5 +1,5 @@
 [<NUnit.Framework.TestFixture>]
-module SomeLibTests
+module SimpleLibxUnitTests
 
 
 open System
@@ -13,7 +13,7 @@ open type NUnit.Framework.Assert
 
 open Allure.Xunit.Attributes
 open Xunit
-open SomeLib
+open SimpleLib
 
 
 // NUnit

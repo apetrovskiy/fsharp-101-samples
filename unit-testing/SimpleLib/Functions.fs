@@ -1,4 +1,4 @@
-namespace SomeLib
+namespace SimpleLib
 
 module FuncLib =
 

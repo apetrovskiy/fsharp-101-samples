@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SomeLib\SomeLib.fsproj" />
+    <ProjectReference Include="..\SimpleLib\SimpleLib.fsproj" />
   </ItemGroup>
 
 </Project>
