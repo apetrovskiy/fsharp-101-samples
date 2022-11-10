@@ -48,8 +48,6 @@ jobs:
         if: always()
         run: |
           pwd
-          echo "allure-results"
-          ls allure-results
           echo "report"
           ls report
           echo "report/allure-results"
