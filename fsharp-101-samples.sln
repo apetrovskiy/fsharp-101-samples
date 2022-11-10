@@ -25,6 +25,12 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SimpleLib", "unit-testing\S
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SimpleLibxUnitTests", "unit-testing\SimpleLibxUnitTests\SimpleLibxUnitTests.fsproj", "{DFC9B9AF-F0A2-4E6D-8ED0-585EF06A359C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit-testing", "unit-testing", "{596C6B3F-BD45-47C5-9CA0-F762F10FC5AE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SimpleLibMsTests", "unit-testing\SimpleLibMsTests\SimpleLibMsTests.fsproj", "{47267B9F-F677-4341-AF4C-DD7D9E7A8510}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SimpleLibNUnitTests", "unit-testing\SimpleLibNUnitTests\SimpleLibNUnitTests.fsproj", "{A88239D3-F0A0-4598-8DE5-BDD87CEE1A3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +84,19 @@ Global
 		{DFC9B9AF-F0A2-4E6D-8ED0-585EF06A359C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFC9B9AF-F0A2-4E6D-8ED0-585EF06A359C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFC9B9AF-F0A2-4E6D-8ED0-585EF06A359C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47267B9F-F677-4341-AF4C-DD7D9E7A8510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47267B9F-F677-4341-AF4C-DD7D9E7A8510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47267B9F-F677-4341-AF4C-DD7D9E7A8510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47267B9F-F677-4341-AF4C-DD7D9E7A8510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88239D3-F0A0-4598-8DE5-BDD87CEE1A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88239D3-F0A0-4598-8DE5-BDD87CEE1A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88239D3-F0A0-4598-8DE5-BDD87CEE1A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88239D3-F0A0-4598-8DE5-BDD87CEE1A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47267B9F-F677-4341-AF4C-DD7D9E7A8510} = {596C6B3F-BD45-47C5-9CA0-F762F10FC5AE}
+		{A88239D3-F0A0-4598-8DE5-BDD87CEE1A3B} = {596C6B3F-BD45-47C5-9CA0-F762F10FC5AE}
+		{6618AEBF-3FF2-48C8-9D7E-850BE093D798} = {596C6B3F-BD45-47C5-9CA0-F762F10FC5AE}
+		{DFC9B9AF-F0A2-4E6D-8ED0-585EF06A359C} = {596C6B3F-BD45-47C5-9CA0-F762F10FC5AE}
 	EndGlobalSection
 EndGlobal
