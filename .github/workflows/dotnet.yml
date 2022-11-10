@@ -49,18 +49,6 @@ jobs:
           ls report
           echo "report/allure-results"
           ls report/allure-results
-
-  environment-data:
-    runs-on: ubuntu-latest
-    if: always()
-    needs:
-      - dotnet
-    steps:
-      # - uses: actions/checkout@v3
-      - uses: ./.github/actions/allure-prep
-      # - uses: ./.github/actions/switch-network
-      # - uses: ./.github/actions/allure-environment-data
-      #   if: always()
       - uses: ./.github/actions/allure-upload
         if: always()
         with:
@@ -69,7 +57,7 @@ jobs:
   allure:
     runs-on: ubuntu-latest
     if: always()
-    needs: environment-data
+    needs: dotnet
     steps:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v3
