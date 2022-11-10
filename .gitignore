@@ -703,3 +703,4 @@ fabric.properties
 .idea/**/
 
 allure-results/**
+report/**
