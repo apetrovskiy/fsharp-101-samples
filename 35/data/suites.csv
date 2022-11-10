@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Nov 10 13:23:38 GMT 2022","Thu Nov 10 13:23:38 GMT 2022","0","","NUnit, xUnit","","SomeLibTests","SomeLibTests.factorialTest(number: 1, expectedResult: 1)","SomeLibTests.factorialTest(number: 1, expectedResult: 1)",""
+"passed","Thu Nov 10 13:23:38 GMT 2022","Thu Nov 10 13:23:38 GMT 2022","1","","NUnit, xUnit","","SomeLibTests","SomeLibTests.factorialTest(number: 4, expectedResult: 24)","SomeLibTests.factorialTest(number: 4, expectedResult: 24)",""
+"passed","Thu Nov 10 13:23:38 GMT 2022","Thu Nov 10 13:23:38 GMT 2022","0","","NUnit, xUnit","","SomeLibTests","SomeLibTests.factorialTest(number: 0, expectedResult: 1)","SomeLibTests.factorialTest(number: 0, expectedResult: 1)",""
+"passed","Thu Nov 10 13:23:38 GMT 2022","Thu Nov 10 13:23:38 GMT 2022","0","","NUnit, xUnit","","SomeLibTests","SomeLibTests.factorialTest(number: 2, expectedResult: 2)","SomeLibTests.factorialTest(number: 2, expectedResult: 2)",""
+"passed","Thu Nov 10 13:23:38 GMT 2022","Thu Nov 10 13:23:38 GMT 2022","19","","NUnit, xUnit","","SomeLibTests","SomeLibTests.factorialTest(number: 3, expectedResult: 6)","SomeLibTests.factorialTest(number: 3, expectedResult: 6)",""
