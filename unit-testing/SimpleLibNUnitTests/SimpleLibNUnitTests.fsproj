@@ -9,8 +9,11 @@
     <Compile Include="UnitTest1.fs" />
     <Compile Include="FunctionsTest.fs" />
     <Content Include="allureConfig.json" />
+    <Folder Include="Allure-Results" />
+    <Folder Include="Allure-Reports" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Allure.Net.Commons" Version="2.9.2-preview.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit.Allure" Version="1.2.1.1" />
