@@ -12,6 +12,12 @@ type testData =
 [<TestFixture>]
 [<NUnit.Allure.Core.AllureNUnit>]
 [<NUnit.Allure.Attributes.AllureSuite("NUnit")>]
+
+[<NUnit.Allure.Attributes.AllureEpic("Unit testing in F#")>]
+[<NUnit.Allure.Attributes.AllureFeature([| "NUnit tests" |])>]
+[<NUnit.Allure.Attributes.AllureStory([| "NUnit" |])>]
+[<NUnit.Allure.Attributes.AllureSuite("NUnit")>]
+[<NUnit.Allure.Attributes.AllureTag([| "NUnit" |])>]
 module SimpleLibNUnitTests =
 
 
