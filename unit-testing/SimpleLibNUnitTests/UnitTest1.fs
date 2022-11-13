@@ -17,10 +17,10 @@ open NUnit.Framework.Constraints
 
 /// <summary>
 /// This test fixture attempts to exercise all the syntactic
-/// variations of Assert without getting into failures, errors 
-/// or corner cases. Thus, some of the tests may be duplicated 
+/// variations of Assert without getting into failures, errors
+/// or corner cases. Thus, some of the tests may be duplicated
 /// in other fixtures.
-/// 
+///
 /// Each test performs the same operations using the classic
 /// syntax (if available) and the constraint syntax. The
 /// inherited syntax is not used in this example, since it
@@ -29,37 +29,21 @@ open NUnit.Framework.Constraints
 /// </summary>
 
 [<Test>]
-[<AllureName("Assert.IsNull")>]
-let IsNull() =
-    let nada : obj = null
+[<AllureName("TODO: to delete")>]
+let IsNull () =
+    let nada: obj = null
     Assert.IsNull(nada)
     Assert.That(nada, Is.Null)
 
 [<Test>]
-[<AllureName("Assert.IsNotNull")>]
-let IsNotNull() =
+[<AllureName("TODO: to delete 2")>]
+let IsNotNull () =
     Assert.IsNotNull(42)
     Assert.That(42, Is.Not.Null)
 
-// [<NUnit.Framework.TestFixture>]
-// [<NUnit.Allure.Core.AllureNUnit>]
-//
-// [<NUnit.Allure.Attributes.AllureEpic("Unit testing in F#")>]
-// [<NUnit.Allure.Attributes.AllureFeature([| "NUnit tests" |])>]
-// [<NUnit.Allure.Attributes.AllureStory([| "NUnit" |])>]
-// [<NUnit.Allure.Attributes.AllureSuite("NUnit")>]
-// [<NUnit.Allure.Attributes.AllureTag([| "NUnit" |])>]
-// module SampleTests
-//
-// open System
-// open System.Collections
-// open NUnit.Allure.Attributes
-// open NUnit.Allure.Core
-// open NUnit.Framework
-// open NUnit.Framework.Constraints
 
-[<SetUp>]
-let Setup () = ()
+
+
 
 [<Test>]
 [<AllureName("basic NUnit test")>]

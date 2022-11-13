@@ -34,26 +34,17 @@ let factorialTestData () = //: IEnumerable<TestCaseData> =
 
 
 [<Test>]
-[<AllureName("simple NUnit test")>]
+[<AllureName("a simple NUnit test")>]
 let someTest () =
     let n = 3
     AreEqual(n * n, FuncLib.square n)
 
 [<Test>]
+[<AllureName("one more NUnit test")>]
 let oneMoreTest () = Assert.AreEqual(1, 1)
 
-[<AllureEpic("Unit testing in F#")>]
-[<AllureFeature([| "Parameterized tests" |])>]
-[<AllureStory([| "NUnit" |])>]
 
-[<AllureTag([| "NUnit" |])>]
-// [<AllureSeverity(SeverityLevel.normal)>]
-[<AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
-// [<AllureId(123)>]
-[<AllureName("test0001 NUnit")>]
-
-
-// [<Test>]
+// variations
 // [<TestCaseSource(typeof< testClass001>, "factorialTestData" )>]
 // [<TestCaseSource("factorialTestData")>]
 // [<TestCaseSource(typeof< testData>, "factorialTestData" )>]

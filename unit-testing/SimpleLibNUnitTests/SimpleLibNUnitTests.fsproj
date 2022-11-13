@@ -9,7 +9,9 @@
   <ItemGroup>
     <Compile Include="UnitTest1.fs" />
     <Compile Include="FunctionsTest.fs" />
-    <Content Include="allureConfig.json" />
+    <Content Include="allureConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="AssertSyntaxTests.fs" />
   </ItemGroup>
   <ItemGroup>
