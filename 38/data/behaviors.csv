@@ -1,0 +1,5 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"Unit testing in F#","Parameterized tests","xUnit","0","0","5","0","0"
+"Unit testing in F#","Parameterized tests","Unquote","0","0","5","0","0"
+"Unit testing in F#","Single tests","Unquote","0","0","1","0","0"
+"","","","1","0","0","0","0"
