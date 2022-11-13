@@ -1,29 +1,4 @@
-[<NUnit.Framework.TestFixture>]
-[<NUnit.Allure.Core.AllureNUnit(false)>]
-[<NUnit.Allure.Attributes.AllureSuite("NUnit")>]
-module SimpleLibNUnitTests
-
-
-open System
-open System.Collections.Generic
-open Allure.Net.Commons
-// open Allure.Commons
-open NUnit.Allure.Attributes
-open NUnit.Allure.Core
 open NUnit.Framework
-
-open type NUnit.Framework.Assert
-
-
-open SimpleLib
-
-// let factorialTestData () = //: IEnumerable<TestCaseData> =
-//     [ new TestCaseData(0, 1)
-//       new TestCaseData(1, 1)
-//       new TestCaseData(2, 2)
-//       new TestCaseData(3, 6)
-//       new TestCaseData(4, 24) ]
-
 
 type testData =
 
@@ -34,11 +9,43 @@ type testData =
           new TestCaseData(3, 6)
           new TestCaseData(4, 24) ]
 
+[<TestFixture>]
+[<NUnit.Allure.Core.AllureNUnit>]
+[<NUnit.Allure.Attributes.AllureSuite("NUnit")>]
+module SimpleLibNUnitTests =
 
-// [<TestFixture>]
-[<AllureNUnit(false)>]
-[<AllureSuite("NUnit")>]
-type testClass001() =
+
+    open System
+    open System.Collections.Generic
+    open Allure.Net.Commons
+    // open Allure.Commons
+    open NUnit.Allure.Attributes
+    open NUnit.Allure.Core
+    open NUnit.Framework
+
+    open type NUnit.Framework.Assert
+
+
+    open SimpleLib
+
+    // let factorialTestData () = //: IEnumerable<TestCaseData> =
+    //     [ new TestCaseData(0, 1)
+    //       new TestCaseData(1, 1)
+    //       new TestCaseData(2, 2)
+    //       new TestCaseData(3, 6)
+    //       new TestCaseData(4, 24) ]
+
+
+    [<Test>]
+    [<AllureName("simple NUnit test")>]
+    let someTest () =
+        let n = 3
+        AreEqual(n * n, FuncLib.square n)
+
+    // [<TestFixture>]
+    // [<AllureNUnit>]
+    // [<AllureSuite("NUnit")>]
+    // type testClass001() =
 
     [<AllureEpic("Unit testing in F#")>]
     [<AllureFeature([| "Parameterized tests" |])>]
@@ -59,6 +66,6 @@ type testClass001() =
     // [<TestCaseSource( nameof factorialTestData )>]
     // [<TestCaseSource(typeof SimpleLibNUnitTests, nameof factorialTestData )>]
     // [<Description("NUnit parameterized test")>]
-    member this. factorialTest (number: int, expectedResult: int) =
+    let factorialTest (number: int, expectedResult: int) =
         let actualResult = FuncLib.factorial number
         AreEqual(expectedResult, actualResult, $"Expected = {expectedResult}, actual = {actualResult}")

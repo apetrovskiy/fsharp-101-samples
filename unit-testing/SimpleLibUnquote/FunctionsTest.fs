@@ -1,4 +1,4 @@
-module SimpleLibxUnitTests
+module SimpleLibUnquoteTests
 
 
 
@@ -6,17 +6,19 @@ open System.Collections.Generic
 open Allure.Commons
 
 
+
 open Allure.Xunit.Attributes
+open Swensen.Unquote
 open Xunit
 
 open type Xunit.Assert
 open SimpleLib
 
-
 [<AllureXunit>]
 let squareTest =
     let n = 3
-    Equal(n * n, FuncLib.square n)
+    // Equal(n * n, FuncLib.square n)
+    test <@ n * n = FuncLib.square n @>
 
 
 
@@ -30,9 +32,9 @@ let factorialXunitTestData () : IEnumerable<(obj)[]> =
 
 [<AllureEpic("Unit testing in F#")>]
 [<AllureFeature([| "Parameterized tests" |])>]
-[<AllureStory([| "xUnit" |])>]
-[<AllureSuite("xUnit")>]
-[<AllureTag([| "xUnit" |])>]
+[<AllureStory([| "Unquote" |])>]
+[<AllureSuite("Unquote")>]
+[<AllureTag([| "Unquote" |])>]
 [<AllureSeverity(SeverityLevel.normal)>]
 [<AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
 
@@ -42,4 +44,4 @@ let factorialXunitTestData () : IEnumerable<(obj)[]> =
 [<MemberData(nameof (factorialXunitTestData))>]
 let factorialTest (number: int, expectedResult: int) =
     let actualResult = FuncLib.factorial number
-    Assert.Equal(expectedResult, actualResult)
+    test <@ expectedResult = actualResult @>
