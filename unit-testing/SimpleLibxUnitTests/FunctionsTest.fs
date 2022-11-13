@@ -1,3 +1,10 @@
+[<Allure.Xunit.Attributes.AllureEpic("Unit testing in F#")>]
+[<Allure.Xunit.Attributes.AllureFeature([| "Parameterized tests" |])>]
+[<Allure.Xunit.Attributes.AllureStory([| "xUnit" |])>]
+[<Allure.Xunit.Attributes.AllureSuite("xUnit")>]
+[<Allure.Xunit.Attributes.AllureTag([| "xUnit" |])>]
+[<Allure.Xunit.Attributes.AllureSeverity(Allure.Commons.SeverityLevel.normal)>]
+[<Allure.Xunit.Attributes.AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
 module SimpleLibxUnitTests
 
 
@@ -28,13 +35,7 @@ let factorialXunitTestData () : IEnumerable<(obj)[]> =
       [| 4; 24 |] ]
 
 
-[<AllureEpic("Unit testing in F#")>]
-[<AllureFeature([| "Parameterized tests" |])>]
-[<AllureStory([| "xUnit" |])>]
-[<AllureSuite("xUnit")>]
-[<AllureTag([| "xUnit" |])>]
-[<AllureSeverity(SeverityLevel.normal)>]
-[<AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
+
 
 
 
