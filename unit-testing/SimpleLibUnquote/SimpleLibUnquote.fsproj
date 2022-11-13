@@ -5,6 +5,8 @@
     <GenerateProgramFile>false</GenerateProgramFile>
     <OutputType>Library</OutputType>
     <LangVersion>latestmajor</LangVersion>
+    <AssemblyName>SimpleLibUnquoteTests</AssemblyName>
+    <RootNamespace>SimpleLibUnquoteTests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Tests.fs" />
