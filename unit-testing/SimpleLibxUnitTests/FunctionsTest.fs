@@ -4,7 +4,6 @@
 [<Allure.Xunit.Attributes.AllureSuite("xUnit")>]
 [<Allure.Xunit.Attributes.AllureTag([| "xUnit" |])>]
 [<Allure.Xunit.Attributes.AllureSeverity(Allure.Commons.SeverityLevel.normal)>]
-[<Allure.Xunit.Attributes.AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
 module SimpleLibxUnitTests
 
 
@@ -20,10 +19,6 @@ open type Xunit.Assert
 open SimpleLib
 
 
-[<AllureXunit>]
-let squareTest =
-    let n = 3
-    Equal(n * n, FuncLib.square n)
 
 
 
@@ -43,4 +38,4 @@ let factorialXunitTestData () : IEnumerable<(obj)[]> =
 [<MemberData(nameof (factorialXunitTestData))>]
 let factorialTest (number: int, expectedResult: int) =
     let actualResult = FuncLib.factorial number
-    Assert.Equal(expectedResult, actualResult)
+    Equal(expectedResult, actualResult)

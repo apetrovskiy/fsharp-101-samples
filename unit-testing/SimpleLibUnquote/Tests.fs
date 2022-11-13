@@ -4,7 +4,6 @@
 [<Allure.Xunit.Attributes.AllureSuite("Unquote")>]
 [<Allure.Xunit.Attributes.AllureTag([| "Unquote" |])>]
 [<Allure.Xunit.Attributes.AllureSeverity(Allure.Commons.SeverityLevel.normal)>]
-[<Allure.Xunit.Attributes.AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
 module Tests
 
 open Xunit

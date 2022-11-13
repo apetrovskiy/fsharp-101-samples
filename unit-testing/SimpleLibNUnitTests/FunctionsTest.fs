@@ -2,13 +2,12 @@
 [<NUnit.Allure.Core.AllureNUnit>]
 
 [<NUnit.Allure.Attributes.AllureEpic("Unit testing in F#")>]
-[<NUnit.Allure.Attributes.AllureFeature([| "NUnit tests" |])>]
+[<NUnit.Allure.Attributes.AllureFeature([| "Parameterized tests" |])>]
 [<NUnit.Allure.Attributes.AllureStory([| "NUnit" |])>]
 [<NUnit.Allure.Attributes.AllureSuite("NUnit")>]
 [<NUnit.Allure.Attributes.AllureTag([| "NUnit" |])>]
 
-// these two do not work)
-// module NUnit.Samples.AssertSyntaxTests2
+// this one does not work)
 // module SimpleLibNUnitTests2
 module NUnit.Samples.SimpleLibNUnitTests
 
@@ -33,11 +32,7 @@ let factorialTestData () = //: IEnumerable<TestCaseData> =
 
 
 
-[<Test>]
-[<AllureName("a simple NUnit test")>]
-let someTest () =
-    let n = 3
-    AreEqual(n * n, FuncLib.square n)
+
 
 [<Test>]
 [<AllureName("one more NUnit test")>]

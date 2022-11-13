@@ -3,13 +3,13 @@
 [<AutoOpen>] //making auto open allows us not to have to fully qualify module properties
 
 
+
 [<Allure.Xunit.Attributes.AllureEpic("Unit testing in F#")>]
 [<Allure.Xunit.Attributes.AllureFeature([| "FSharpNameTests" |])>]
 [<Allure.Xunit.Attributes.AllureStory([| "Unquote" |])>]
 [<Allure.Xunit.Attributes.AllureSuite("Unquote")>]
 [<Allure.Xunit.Attributes.AllureTag([| "Unquote" |])>]
 [<Allure.Xunit.Attributes.AllureSeverity(Allure.Commons.SeverityLevel.normal)>]
-[<Allure.Xunit.Attributes.AllureIssue("GitHub#1", "https://github.com/unickq/allure-nunit")>]
 module FSharpNameTests
 
 open Allure.Xunit.Attributes

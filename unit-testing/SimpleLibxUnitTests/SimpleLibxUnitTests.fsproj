@@ -14,6 +14,7 @@
     <Content Include="allureConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Compile Include="SingleTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
